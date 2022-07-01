@@ -32,7 +32,7 @@ export const Timer = styled.div`
   background-color: white;
   color: black;
   font-size: 40px;
-  height: 90px;
+  width: 9%;
   aspect-ratio: 2;
   justify-content: space-between;
   align-items: center;
@@ -45,9 +45,7 @@ export const Timer = styled.div`
 `;
 
 export const PlayerInfo = styled(Timer)`
-  border-radius: 50px 50px 0 0;
-  width: fit-content;
-  aspect-ratio: unset;
+  border-radius: 20px 20px 0 0;
 
   span {
     text-align: center;
@@ -67,4 +65,26 @@ export const Announcer = styled.div`
   justify-content: center;
   align-items: center;
   line-height: 1;
+`;
+
+export const Name = styled.div`
+  width: 450%;
+  line-height: 1;
+  background-color: white;
+  color: #333;
+  font-size: 20px;
+  position: absolute;
+  white-space: nowrap;
+  top: 0;
+  padding: 3px;
+
+  &:first-of-type {
+    right: 100%;
+    text-align: right;
+  }
+
+  &:last-of-type {
+    text-align: left;
+    left: 100%;
+  }
 `;
