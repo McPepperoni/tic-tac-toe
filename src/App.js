@@ -51,6 +51,13 @@ function App() {
                       setWinner={setIsWon}
                       winner={isWon}
                       stopTimer={pause}
+                      isChecked={
+                        Object.keys(checked).indexOf(key) > -1
+                          ? checked[key]
+                          : 0
+                      }
+                      setGridSize={setGridSize}
+                      gridSize={gridSize}
                     ></Board.Piece>
                   </>
                 );
@@ -64,7 +71,14 @@ function App() {
             seconds={seconds}
             minutes={minutes}
             hours={hours}
-          />
+          >
+            <button
+              style={{ position: "absolute", bottom: "0" }}
+              onClick={() => setGridSize(50)}
+            >
+              hasduhsaidhgasjhifg
+            </button>
+          </UI>
         </>
       ) : null}
       <Welcome

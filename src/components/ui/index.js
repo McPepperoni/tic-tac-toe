@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import { Announcer, Cover, Name, PlayerInfo, Timer } from "./styles";
 
-export function UI({ winner, IGNs, currentPlayer, seconds, minutes, hours }) {
+export function UI({
+  winner,
+  IGNs,
+  currentPlayer,
+  seconds,
+  minutes,
+  hours,
+  children,
+  ...restProps
+}) {
   return (
     <>
+      {children}
       <Timer style={{ top: "0" }} className="timer">
         <Name>{IGNs.player1}</Name>
         {hours.toString().padStart(2, "0") +

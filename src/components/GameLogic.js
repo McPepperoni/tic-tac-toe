@@ -1,8 +1,8 @@
-function GETPosition(position) {
+export function GETPosition(position) {
   return { y: parseInt(position.slice(0, 5)), x: parseInt(position.slice(5)) };
 }
 
-function PARSEPosition(position) {
+export function PARSEPosition(position) {
   return (
     (position.y < 0 ? "-" : "+") +
     Math.abs(position.y).toString().padStart(4, "0") +
