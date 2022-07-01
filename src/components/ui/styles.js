@@ -34,7 +34,7 @@ export const Timer = styled.div`
   font-size: 40px;
   width: 9%;
   aspect-ratio: 2;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
 
@@ -42,6 +42,11 @@ export const Timer = styled.div`
 
   left: 50%;
   transform: translateX(-50%);
+
+  p {
+    margin: 0;
+    width: fit-content;
+  }
 `;
 
 export const PlayerInfo = styled(Timer)`

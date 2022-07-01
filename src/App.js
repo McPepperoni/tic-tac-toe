@@ -13,9 +13,16 @@ function App() {
   const [isWon, setIsWon] = useState(0);
   const [gridSize, setGridSize] = useState(30);
 
-  const { seconds, minutes, hours, pause, start } = useStopwatch({
+  const { seconds, minutes, pause, start } = useStopwatch({
     autoStart: false,
   });
+
+  useEffect(() => {
+    if (minutes >= 20 ) setIsWon(3);
+  
+  }, [minutes])
+  
+  
 
   useEffect(() => {
     if (player1.ready === true && player2.ready === true) start();
@@ -63,7 +70,6 @@ function App() {
             IGNs={{ player1: player1.ign, player2: player2.ign }}
             seconds={seconds}
             minutes={minutes}
-            hours={hours}
           />
         </>
       ) : null}
